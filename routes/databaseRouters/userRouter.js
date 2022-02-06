@@ -11,14 +11,14 @@ router.get('/users', async (req, res) => {
 })
 
 router.post('/users', async (req, res) => {
-  const { username, password, dateCreated } = req.body;
+  const { username = null, password = null} = req.body;
 
   if(username == null || password == null) {
     res.json({ "Successful": false, "Reason": "Username or password not specified"});
     return;
   }
 
-  const status = await SQLUserController.addUser(username, password, dateCreated);
+  const status = await SQLUserController.addUser(username, password);
   status.Successful = true;
   res.json(status);
 })

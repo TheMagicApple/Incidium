@@ -1,8 +1,8 @@
 
 const SQLConnection = require('./SQLConnection.js')
 
-async function addUser(username, password, dateCreated) {
-  const queryString = `INSERT INTO users VALUES (${username}, ${password}, ${dateCreated}`
+async function addUser(username, password) {
+  const queryString = `INSERT INTO users VALUES (${username}, ${password}, CURRENT_TIMESTAMP())`
   const result = await SQLConnection.query(queryString).catch(err => { throw err });
   return result;
 }

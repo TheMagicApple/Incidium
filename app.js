@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express();
 
+app.set('json spaces', 4);
+
 const routers = require("./routes/routers.js");
 
 app.use('/', routers);
