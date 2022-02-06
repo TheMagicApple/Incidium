@@ -10,7 +10,7 @@ var pyramid = new Nft("/pyramid/pyramid.obj", "/pyramid/pyramid.mtl");
 var cube = new Nft("/cube/cube.obj", "/cube/cube.mtl");
 var shrek = new Nft("/shrek/shrek.obj", "/shrek/shrek.mtl");
 var duck=new Nft("/duck/duck.obj","/duck/duck.mtl");
-var sphere=new Nft("/sp/duck.obj","/duck/duck.mtl");
+var sphere=new Nft("/sphere/sphere.obj","/sphere/sphere.mtl");
 
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
