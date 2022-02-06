@@ -1,29 +1,10 @@
 //Load OBJ
-const loader = new THREE.ObjectLoader();
-
-// load a resource
-loader.load(
-	// resource URL
-	'assets/test.obj',
-	// called when resource is loaded
-	function ( object ) {
-
-		scene.add( object );
-
-	},
-	// called when loading is in progresses
-	function ( xhr ) {
-
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-
-	},
-	// called when loading has errors
-	function ( error ) {
-
-		console.log( 'An error happened' );
-
-	}
-);
+var objLoader = new THREE.OBJLoader();
+var mainOBJ = [];
+objLoader.setPath('/assets/');
+objLoader.load('test.obj', function(object) {
+  scene.add(object);
+})
 
 //NFT Class
 class Nft {
@@ -45,7 +26,7 @@ function rotate(t, direction){
 
   if (t >= 1) return; // Motion ended
   t += step;  // Increment time
-  mesh.rotation.y += direction/10; // Increment rotation
+  object.rotation.y += direction/10; // Increment rotation
   //requestAnimationFrame(() => rotate(t, direction));
 }
 

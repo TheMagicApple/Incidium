@@ -6,22 +6,21 @@
     <title>Incidium</title>
     <link rel="shortcut icon" type="image/png" href="/assets/logoreal.png"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="/css/extra.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="Header">
-     <a href="/" id="Title">Incidium</a>
-    <!--When you click on nft "snapshot" to get to this page, it will save nft name in local storage-->
+    <a href="/" id="Title">Incidium</a>
     <img id="Logo" src="/assets/logoreal.png" width="70" height="70">
-    <input type="button" onclick="rotate(0, -1);"></input>
-     <input type="button" onclick="rotate(0, 1);"></input>
+    
     </div>
-    <a id="Buy" href="/buy"><b>₿uy Now</b></a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
-    <script src="js/OBJLoader.js"></script>
-    <script src="/js/nft.js"></script>
+    <p id="usernameLabel">Username:</p>
+    <p id="passwordLabel">Password:</p>
+    <input id="username"></input>
+    <input type="password" id="password"></input>
+    <a href="" id="signup" onclick="signup();">Sign up</a>
+    <script src="/js/script.js"></script>
   </body>
 </html>

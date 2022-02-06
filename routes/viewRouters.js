@@ -22,4 +22,12 @@ router.get('/nft', (req, res) => {
     res.sendFile(path.join(viewsPath, '/nft.html'))
 });
 
+router.get('/buy', (req, res) => {
+  res.sendFile(path.join(viewsPath, '/buy.html'))
+})
+
+router.get('/signup', (req, res) => {
+  res.sendFile(path.join(viewsPath, '/signup.html'))
+})
+
 module.exports = router
