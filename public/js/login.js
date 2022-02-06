@@ -19,9 +19,6 @@ function login() {
     if(usernameInputStatus != null) return usernameInputStatus;
     if(passwordInputStatus != null) return passwordInputStatus;
 
-    const loginreq = new XMLHttpRequest();
-    // loginreq.open("GET", `/api/users/user?username=${usernameValue}&password=${passwordValue}`)
-    // xhttp.send();
     const request = new XMLHttpRequest();
     const requestBody = {
         "username": usernameValue,
