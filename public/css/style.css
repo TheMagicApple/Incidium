@@ -567,4 +567,7 @@ body{
   border-bottom:2px solid black;
   top:10%;
   height:20%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
