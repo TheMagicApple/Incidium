@@ -20,7 +20,7 @@ async function getUsers() {
 }
 
 async function getUser(username, password) {
-  const queryString = `SELECT * FROM users WHERE username = "${username}" AND password = "${password}"`
+  const queryString = `SELECT CASE WHEN username = "${username}" AND password = "${password}" ELSE NULL END FROM users`
   const result = await SQLConnection.query(queryString).catch(err => { return null });
   return result;
 }
