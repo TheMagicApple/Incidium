@@ -559,3 +559,12 @@ body{
 
   text-decoration:none;
 }
+#Account{
+  font-size:150px;
+  width:50%;
+  position: absolute;
+  left:25%;
+  border-bottom:2px solid black;
+  top:10%;
+  height:20%;
+}
