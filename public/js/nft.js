@@ -10,7 +10,7 @@ var pyramid = new Nft("/pyramid/pyramid.obj", "/pyramid/pyramid.mtl");
 
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
-var paths = [monke, pyramid, "lambo", "sphere", "rocket", "duck"];
+var paths = [cube, pyramid, monke, "sphere", "rocket", "duck"];
 displayNft = paths[displayNft];
 
 
