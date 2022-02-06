@@ -7,7 +7,13 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("Header").style.top = "0";
   } else {
-    document.getElementById("Header").style.top = "-120px";
+    document.getElementById("Header").style.top = "-125px";
   }
   prevScrollpos = currentScrollPos;
+}
+
+function examine(nftNum) {
+  localStorage.setItem("nftName",nftNum);
+  
+  window.location.href = "/nft";
 }
