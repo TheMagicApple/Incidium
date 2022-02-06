@@ -29,7 +29,5 @@ function signUp() {
     request.open("POST", "/api/users")
     request.setRequestHeader("Content-type","application/json;charset=UTF-8")
     request.send(JSON.stringify(requestBody))
-    request.log(request);
     console.log(requestBody)
-    console.log(requst);
 }
