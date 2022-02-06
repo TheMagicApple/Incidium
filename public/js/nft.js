@@ -14,7 +14,7 @@ var sphere=new Nft("/sphere/sphere.obj","/sphere/sphere.mtl");
 
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
-var paths = [cube, pyramid, monke, shrek, sphere, duck];
+var paths = [cube, pyramid, monke, sphere, shrek0, , duck];
 displayNft = paths[displayNft];
 
 
@@ -90,7 +90,19 @@ window.addEventListener('resize', () => {
   
 })
 
-//Famous Yellow Cube
+
+//var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
+//ar mesh = new THREE.Mesh(geometry, material);
+
+
+//Slick Silver Sphere
+/*
+var geometry = new THREE.SphereGeometry(1, 1, 1);
+var material = new THREE.MeshLambertMaterial({color: 0xc0c0c0 });
+var mesh = new THREE.Mesh(geometry, material);
+*/
+
+//scene.add(mesh);
 
 //Light
 
