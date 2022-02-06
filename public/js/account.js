@@ -1,13 +1,13 @@
-var express = require('express')
-var cookieParser = require('cookie-parser')
+function setUsername() {
+    console.log("ASKDASKHD")
+    const req = new XMLHttpRequest();
 
-var app = express()
-app.use(cookieParser())
+    req.onload = () => {
+        console.log(req.response)
+        document.querySelector("#Account").innerText = `Welcome ${JSON.parse(req.response).username}`;
+    }
 
-app.get('/', function (req, res) {
-  // Cookies that have not been signed
-  var username=req.cookies("username");
-})
+    req.open("GET", "/api/login/info", true);
+    req.send();
+}
 
-var username=req.cookies("username");
-document.getElementById("Account").innerHTML="Welcome "+username;
