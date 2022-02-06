@@ -1,5 +1,7 @@
 //Load specific OBJ
-var displayNft = localSto
+var displayNft = Number(localStorage.getItem("nftName")) - 1;
+var nftPaths = ["/monke/", "pyramid", "lambo", "sphere", "rocket", "duck"];
+var = currPath
 
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setBaseUrl('/assets/');

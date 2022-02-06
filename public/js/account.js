@@ -1,2 +1,2 @@
-var username=browser.cookies.get("username");
+var username=req.cookies.get("username");
 document.getElementById("Account").innerHTML="Welcome "+username;
