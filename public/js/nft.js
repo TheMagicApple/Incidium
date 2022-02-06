@@ -1,7 +1,17 @@
+//NFT Class
+class Nft {
+  constructor(objPath, mtlPath) {
+    this.objPath = objPath;
+    this.mtlPath = mtlPath;
+  }
+}
+var monke = new Nft("/monke/monke.ob")
+
+
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
-var nftPaths = ["/monke/", "pyramid", "lambo", "sphere", "rocket", "duck"];
-var = currPath
+var objPaths = ["/monke/", "pyramid", "lambo", "sphere", "rocket", "duck"];
+var = currPath += ""
 
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setBaseUrl('/assets/');
@@ -20,13 +30,6 @@ mtlLoader.load('test.mtl', function(materials) {
 })
 
 
-
-//NFT Class
-class Nft {
-  constructor(model) {
-    this.model = model;
-  }
-}
 
 
 //Functions
