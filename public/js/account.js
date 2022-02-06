@@ -6,7 +6,7 @@ function setUsername() {
   request.send();
 
   request.onload = () => {
-    console.log(request.response);
-    accountElement.innerText = `Welcome ${JSON.parse(request.response).username}`;
+    console.log(this.response)
+    accountElement.innerText = `Welcome ${JSON.parse(this.response).username}`;
   }
 }
