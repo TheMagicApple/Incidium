@@ -6,6 +6,6 @@ function setUsername() {
   request.send();
 
   request.onload = () => {
-    accountElement.innerText = `Welcome ${request.response.username}`;
+    accountElement.innerText = `Welcome ${JSON.parse(request.response).username}`;
   }
 }
