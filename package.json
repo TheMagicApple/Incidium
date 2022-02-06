@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "axios": "^0.25.0",
     "bignumber.js": "^9.0.0",
     "core-util-is": "^1.0.3",
     "dotenv": "^16.0.0",

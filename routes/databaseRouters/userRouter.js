@@ -23,13 +23,13 @@ router.post('/users', async (req, res) => {
   res.json(status);
 })
 
-router.delete('/users/:username', async (req, res) => {
+router.delete('/users/:username/:password', async (req, res) => {
   const status = await SQLUserController.deleteUser(req.params.username);
   res.json(status);
 })
 
-router.get('/users/:userId', async (req, res) => {
-  const status = await SQLUserController.getUser(req.params.username);
+router.get('/users/user', async (req, res) => {
+  const status = await SQLUserController.getUser(req.query.username, req.query.password);
   res.json(status[0] || {});
 })
 

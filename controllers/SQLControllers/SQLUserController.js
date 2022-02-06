@@ -14,14 +14,14 @@ async function deleteUser(username) {
 }
 
 async function getUsers() {
-  const queryString = `SELECT * FROM users`
+  const queryString = `SELECT username, date_created FROM users`
   const result = await SQLConnection.query(queryString).catch(err => { throw err });
   return result;
 }
 
-async function getUser(username) {
-  const queryString = `SELECT * FROM users WHERE username = ${username}`
-  const result = await SQLConnection.query(queryString).catch(err => { throw err });
+async function getUser(username, password) {
+  const queryString = `SELECT * FROM users WHERE username = "${username}" AND password = "${password}"`
+  const result = await SQLConnection.query(queryString).catch(err => { return null });
   return result;
 }
 
