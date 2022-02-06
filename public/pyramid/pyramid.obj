@@ -1,6 +1,6 @@
 # Blender v3.0.1 OBJ File: 'monke2.blend'
 # www.blender.org
-mtllib newPyramid.mtl
+mtllib test6.mtl
 o Cone
 v 0.000000 -0.750000 -1.000000
 v 1.000000 -0.750000 0.000000
