@@ -10,7 +10,7 @@ router.post('/login', async (req, res) => {
     const { username, password } = req.body 
 
     console.log("ASHJKDASJKDHJASLDH")
-    window.location.href="/account";
+    
 
     const response = await axios.get(`http://incidium.tech/api/users/user?username=${username}&password=${password}`);
     if(response == null) return;
@@ -19,6 +19,7 @@ router.post('/login', async (req, res) => {
     res.cookie('password', password);
 
     res.status(200).json({ "Successful": true})
+    window.location.href="/account";
 });
 
 router.post('/logout', (req, res) => {
