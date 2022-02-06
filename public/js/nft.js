@@ -11,11 +11,14 @@ var cube = new Nft("/cube/cube.obj", "/cube/cube.mtl");
 var shrek = new Nft("/shrek/shrek.obj", "/shrek/shrek.mtl");
 var duck=new Nft("/duck/duck.obj","/duck/duck.mtl");
 var sphere=new Nft("/sphere/sphere.obj","/sphere/sphere.mtl");
+var rocket = new Nft("", "";)
 
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
-var paths = [cube, pyramid, monke, sphere, shrek0, , duck];
+var paths = [cube, pyramid, monke, sphere, shrek, rocket duck];
 displayNft = paths[displayNft];
+
+
 
 
 var mtlLoader = new THREE.MTLLoader();
