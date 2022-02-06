@@ -14,18 +14,20 @@ function signUp() {
     const usernameValue = usernameElement.value;
     const passwordValue = passwordElement.value;
 
-    const usernameInputStatus = getInputStatus(username);
-    const passwordInputStatus = getInputStatus(password);
+    const usernameInputStatus = getInputStatus(usernameValue);
+    const passwordInputStatus = getInputStatus(passwordValue);
 
     if(usernameInputStatus != null) return usernameInputStatus;
     if(passwordInputStatus != null) return passwordInputStatus;
 
-    const requst = new XMLHttpRequest();
+
+    const request = new XMLHttpRequest();
     const requestBody = {
         "username": usernameValue,
         "password": passwordValue
     };
-    requst.open("POST", "/api/users")
-    requst.setRequestHeader("Content-type","application/json;charset=UTF-8")
-    requst.send(JSON.stringify(requestBody))
+    request.open("POST", "http://www.incidium.tech/api/users", true)
+    request.setRequestHeader("Content-type","application/json;charset=UTF-8");
+    request.send(JSON.stringify(requestBody))
+    console.log(requestBody)
 }
