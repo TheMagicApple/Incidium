@@ -20,6 +20,8 @@ function signUp() {
     if(usernameInputStatus != null) return usernameInputStatus;
     if(passwordInputStatus != null) return passwordInputStatus;
 
+    console.log(usernameValue);
+
     const requst = new XMLHttpRequest();
     const requestBody = {
         "username": usernameValue,
