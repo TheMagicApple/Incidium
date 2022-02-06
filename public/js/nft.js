@@ -7,10 +7,13 @@ class Nft {
 }
 var monke = new Nft("/monke/monke.obj", "/monke/monke.mtl");
 var pyramid = new Nft("/pyramid/pyramid.obj", "/pyramid/pyramid.mtl");
+var cube = new Nft("/cube/cube.obj", "/cube/cube.mtl");
+var shrek = new Nft("/shrek/shrek.obj", "/shrek/shrek.mtl");
+var duck=new Nft("/duck/12250_Bird_v1_L3.obj","/duck/12250_Bird_v1_L3.mtl");
 
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
-var paths = [pyramid, monke, "sphere", "rocket", "duck"];
+var paths = [cube, pyramid, monke, shrek, "rocket", duck];
 displayNft = paths[displayNft];
 
 
@@ -24,9 +27,11 @@ mtlLoader.load(displayNft.mtlPath, function(materials) {
   objLoader.setMaterials(materials);
   objLoader.setPath('/assets/');
   objLoader.load(displayNft.objPath, function(object) {
+    object.scale.set(0.2, 0.2, 0.2);
     myObj = object;
     scene.add(object);
   })
+  
 
 })
 

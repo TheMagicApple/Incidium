@@ -253,6 +253,18 @@ body{
   left:60%;
   top:65%;
 }
+#NFT7{
+  left:20%;
+  top:115%;
+}
+#NFT8{
+  left:40%;
+  top:115%;
+}
+#NFT9{
+  left:60%;
+  top:115%;
+}
 .nftImg{
   width:300px;
   height:300px;
@@ -408,14 +420,14 @@ body{
   content: '❯';
   position: absolute;
   opacity: 0;  
-  top: 30%;
+  top: 32%;
   right: -20px;
   transition: 0.5s;
 }
 
 #Buy:hover:after {
   opacity: 1;
-  right: 20px;
+  right: 25px;
 }
 #bad{
   position: absolute;
@@ -435,32 +447,97 @@ body{
   left:31%;
   font-size:40px;
 }
-#username{
-  position:absolute;
-  top:33.5%;
-  left:42%;
-  font-size:30px;
-  width:400px;
-  height:50px;
-  border:2px solid black;
+
+main {
+    position: absolute;
+    top: 35.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-#password{
-  position:absolute;
-  top:43.5%;
-  left:42%;
-  font-size:30px;
-  width:400px;
-  height:50px;
-  border:2px solid black;
+main2 {
+    position: absolute;
+    top: 45.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.input-group {
+    position: relative;
+}
+
+.input-group #username {
+    outline: none;
+    border: 2px solid #dadce0;
+    padding: 16px 13px;
+    font-size: 18px;
+    border-radius: 5px;
+    width:350px;
+    transition: 0.2s all;
+}
+
+.input-group #username:valid + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.input-group #username:focus {
+    border: 2px solid royalblue;
+}
+
+.input-group #password {
+    outline: none;
+    border: 2px solid #dadce0;
+    padding: 16px 13px;
+    font-size: 18px;
+    border-radius: 5px;
+    width:350px;
+    transition: 0.2s all;
+}
+
+.input-group #password:valid + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.input-group #password:focus {
+    border: 2px solid royalblue;
+}
+
+.input-group .label {
+    color: #8d8d8d;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    background: #ffffff;
+    transition: 0.2s all;
+}
+
+.input-group #username:focus + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: royalblue;
+}
+
+.input-group #password:focus + .label {
+    top: -8px;
+    padding: 0 3px;
+    font-size: 14px;
+    color: royalblue;
+}
+
 #login{
   position: absolute;
   text-decoration:none;
-  left:44%;
+  left:45%;
   text-align: center;
   width:200px;
   top:60%;
-  height:100px;
+  height:80px;
   font-size:35px;
   border:2px solid rgb(52, 137, 235);
   display: flex;
@@ -490,23 +567,23 @@ body{
   content: '❯';
   position: absolute;
   opacity: 0;  
-  top: 30%;
+  top: 26%;
   right: -20px;
   transition: 0.5s;
 }
 
 #login:hover:after {
   opacity: 1;
-  right: 20px;
+  right: 25px;
 }
 #signup{
   position: absolute;
   text-decoration:none;
-  left:44%;
+  left:45%;
   text-align: center;
   width:200px;
   top:60%;
-  height:100px;
+  height:80px;
   font-size:35px;
   border:2px solid rgb(52, 137, 235);
   display: flex;
@@ -536,22 +613,22 @@ body{
   content: '❯';
   position: absolute;
   opacity: 0;  
-  top: 30%;
+  top: 26%;
   right: -20px;
   transition: 0.5s;
 }
 
 #signup:hover:after {
   opacity: 1;
-  right: 20px;
+  right: 25px;
 }
 #help{
   width:100%;
   position: absolute;
   left:0%;
-  top:80%;
+  top:78%;
   height:10%;
-  font-size:50px;
+  font-size:30px;
   display: flex;
   justify-content:center;
   align-items:center;
@@ -606,7 +683,7 @@ body{
 
 #upload:hover:after{
   opacity: 1;
-  right: 20px;
+  right: 10px;
 }
 
 #upload:after{
@@ -616,4 +693,28 @@ body{
   top: 30%;
   right: -20px;
   transition: 0.5s;
+}
+
+#usericon{
+  top:33.8%;
+  left:40%;
+  width:40px;
+  height:40px;
+  position:absolute;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+#passicon{
+  top:43.8%;
+  left:40%;
+  width:40px;
+  height:40px;
+  position:absolute;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }

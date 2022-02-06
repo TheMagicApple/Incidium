@@ -15,12 +15,23 @@
     <a href="/" id="Title">Incidium</a>
     <img id="Logo" src="/assets/logoreal.png" width="70" height="70">
     </div>
-    <p id="usernameLabel">Username:</p>
-    <p id="passwordLabel">Password:</p>
-    <input id="username"></input>
-    <input type="password" id="password"></input>
+    
+    <img id="usericon" src="/assets/user.png" alt="USER">
+    <img id="passicon" src="/assets/lock.png" alt="LOCK">
+    <main>
+        <div class="input-group">
+            <input type="text" id="username" required id="userField"/>
+            <label for="username" class="label">Username</label>
+        </div>
+    </main>
+    <main2>
+      <div class="input-group">
+            <input type="password" id="password" required id="passField"/>
+            <label for="password" class="label">Password</label>
+        </div>
+    </main2>
     <a href="/account" id="login" onclick="login();">Log in</a>
-    <a href="/signup" id="help">Don't have an account? Signup</a>
+    <a href="/signup" id="help">Don't have an account? Sign Up</a>
     <script src="/js/login.js"></script>
     <script src="/js/script.js"></script>
   </body>
