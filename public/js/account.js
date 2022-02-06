@@ -2,7 +2,7 @@ const accountElement = document.querySelector("#Account")
 
 function setUsername() {
   const request = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  request.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
     accountElement.innerHTML = JSON.parse(this.responseText)
