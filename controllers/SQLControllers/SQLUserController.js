@@ -21,7 +21,7 @@ async function getUsers() {
 
 async function getUser(username, password) {
   const queryString = `SELECT * FROM users WHERE username = "${username}" AND password = "${password}"`
-  const result;
+  let result;
   result = await SQLConnection.query(queryString).catch(err => { result = null });
   return result;
 }
