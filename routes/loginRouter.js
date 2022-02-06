@@ -14,7 +14,7 @@ router.post('/login', async (req, res) => {
     console.log("ASHJKDASJKDHJASLDH")
     
 
-    const response = await axios.get(`http://incidium.tech/api/users/user?username=${username}&password=${password}`);
+    const response = await axios.get(`http://www.incidium.tech/api/users/user?username=${username}&password=${password}`);
     if(response == null) return;
 
     res.cookie('username', username);
