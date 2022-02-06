@@ -109,11 +109,11 @@ var mesh = new THREE.Mesh(geometry, material);
 
 //Light
 
-var light = new THREE.PointLight(0xFFFFFF, 1, 500);
+var light = new THREE.PointLight(0xFFFFFF, 0.5, 500);
 light.position.set(10, 0, 25);
 scene.add(light);
 
-var light2 = new THREE.PointLight(0xFFFFFF, 1, 500);
+var light2 = new THREE.PointLight(0xFFFFFF, 0.5, 500);
 light2.position.set(-10, 0, 25);
 scene.add(light2);
 

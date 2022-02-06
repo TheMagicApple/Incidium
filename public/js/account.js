@@ -1,13 +1,13 @@
-function setUsername() {
-    console.log("ASKDASKHD")
-    const req = new XMLHttpRequest();
+var express = require('express')
+var cookieParser = require('cookie-parser')
 
-    req.onload = () => {
-        console.log(req.response)
-        document.querySelector("#Account").innerText = `Welcome ${JSON.parse(req.response).username}`;
-    }
+var app = express()
+app.use(cookieParser())
 
-    req.open("GET", "/api/login/info", true);
-    req.send();
-}
+app.get('/', function (req, res) {
+  // Cookies that have not been signed
+  var username=req.cookies("username");
+})
 
+var username=req.cookies("username");
+document.getElementById("Account").innerHTML="Welcome "+username;
