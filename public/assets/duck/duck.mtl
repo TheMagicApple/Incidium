@@ -1,10 +1,10 @@
-# Blender MTL File: 'untitled.blend'
+# Blender MTL File: 'None'
 # Material Count: 1
 
-newmtl default
+newmtl 10602_Rubber_Duck_v1_Mat
 Ns 225.000000
 Ka 1.000000 1.000000 1.000000
-Kd 0.854993 0.870927 1.000000
+Kd 0.757165 1.000000 0.306150
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
