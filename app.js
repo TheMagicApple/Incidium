@@ -1,9 +1,9 @@
 const express = require("express")
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send("test");
-});
+const routers = require("./routes/routers.js");
+
+app.use('/', routers);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
