@@ -14,7 +14,7 @@ var sphere=new Nft("/sphere/sphere.obj","/sphere/sphere.mtl");
 
 //Load specific OBJ
 var displayNft = Number(localStorage.getItem("nftName")) - 1;
-var paths = [cube, pyramid, monke, shrek, "rocket", duck];
+var paths = [cube, pyramid, monke, shrek, sphere, duck];
 displayNft = paths[displayNft];
 
 
@@ -28,7 +28,6 @@ mtlLoader.load(displayNft.mtlPath, function(materials) {
   objLoader.setMaterials(materials);
   objLoader.setPath('/assets/');
   objLoader.load(displayNft.objPath, function(object) {
-    object.scale.set(0.2, 0.2, 0.2);
     myObj = object;
     scene.add(object);
   })
