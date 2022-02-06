@@ -28,7 +28,7 @@ function login() {
         "password": passwordValue
     };
     requst.open("POST", "/api/login")
-    requst.setRequestHeader("Content-type","application/json;charset=UTF-8")
+    requst.setRequestHeader("Contenttype-","application/json;charset=UTF-8")
     requst.send(JSON.stringify(requestBody))
 
 }
