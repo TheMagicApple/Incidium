@@ -21,15 +21,15 @@ function signUp() {
     if(passwordInputStatus != null) return passwordInputStatus;
 
 
-    const requst = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
     const requestBody = {
         "username": usernameValue,
         "password": passwordValue
     };
-    requst.open("POST", "/api/users")
-    requst.setRequestHeader("Content-type","application/json;charset=UTF-8")
-    requst.send(JSON.stringify(requestBody))
-    console.log(request);
+    request.open("POST", "/api/users")
+    request.setRequestHeader("Content-type","application/json;charset=UTF-8")
+    request.send(JSON.stringify(requestBody))
+    request.log(request);
     console.log(requestBody)
     console.log(requst);
 }
