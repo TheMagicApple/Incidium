@@ -9,6 +9,7 @@ function setUsername() {
        console.log(request.responseText)
       accountElement.innerText = `Welcome ${JSON.parse(request.responseText).username}`;
     }
+  }
   request.send();
 
   
