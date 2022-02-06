@@ -1,14 +1,16 @@
-//Load any OBJ
+//Load specific OBJ
+var displayNft = localSto
+
 var mtlLoader = new THREE.MTLLoader();
 mtlLoader.setBaseUrl('/assets/');
 mtlLoader.setPath('/assets/');
-mtlLoader.load('monke.mtl', function(materials) {
+mtlLoader.load('test.mtl', function(materials) {
   materials.preload();
 
   var objLoader = new THREE.OBJLoader();
   objLoader.setMaterials(materials);
   objLoader.setPath('/assets/');
-  objLoader.load('monke.obj', function(object) {
+  objLoader.load('test.obj', function(object) {
     myObj = object;
     scene.add(object);
   })
@@ -47,10 +49,10 @@ document.addEventListener('keydown', function(event) {
         rotate(0, 1);
     }
     else if(event.keyCode==38){
-      mesh.rotation.x-=0.1;
+      myObj.rotation.x-=0.1;
     }
     else if(event.keyCode==40){
-      mesh.rotation.x+=0.1;
+      myObj.rotation.x+=0.1;
     }
 });
 

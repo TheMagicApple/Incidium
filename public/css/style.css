@@ -571,3 +571,49 @@ body{
   justify-content:center;
   align-items:center;
 }
+
+#upload{
+  position: absolute;
+  text-decoration:none;
+  left:44%;
+  text-align: center;
+  width:200px;
+  top:60%;
+  height:100px;
+  font-size:35px;
+  border:2px solid rgb(52, 137, 235);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  background-color:rgb(52, 137, 235);
+  border-radius:5px;
+  transition: 0.5s all;
+  animation-duration:1.5s;
+  animation-delay:0.5s;
+  animation-name:b;
+  animation-fill-mode:both;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#upload:hover{
+  filter:brightness(120%);
+  padding-right: 24px;
+  padding-left:8px;
+  transform:scale(1.05);
+}
+
+#upload:hover:after{
+  opacity: 1;
+  right: 20px;
+}
+
+#upload:after{
+  content: '❯';
+  position: absolute;
+  opacity: 0;  
+  top: 30%;
+  right: -20px;
+  transition: 0.5s;
+}
