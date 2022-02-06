@@ -20,7 +20,6 @@ function signUp() {
     if(usernameInputStatus != null) return usernameInputStatus;
     if(passwordInputStatus != null) return passwordInputStatus;
 
-    console.log(usernameValue);
 
     const requst = new XMLHttpRequest();
     const requestBody = {
@@ -30,4 +29,5 @@ function signUp() {
     requst.open("POST", "/api/users")
     requst.setRequestHeader("Content-type","application/json;charset=UTF-8")
     requst.send(JSON.stringify(requestBody))
+    console.log(requst);
 }
