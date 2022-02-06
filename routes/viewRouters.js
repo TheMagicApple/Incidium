@@ -29,5 +29,8 @@ router.get('/buy', (req, res) => {
 router.get('/signup', (req, res) => {
   res.sendFile(path.join(viewsPath, '/signup.html'))
 })
+router.get('/account', (req, res) => {
+  res.sendFile(path.join(viewsPath, '/account.html'))
+})
 
 module.exports = router

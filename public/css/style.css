@@ -190,14 +190,14 @@ body{
   content: '❯';
   position: absolute;
   opacity: 0;  
-  top: 30%;
+  top: 32.5%;
   right: -20px;
   transition: 0.5s;
 }
 
 #Explore2:hover:after {
   opacity: 1;
-  right: 30px;
+  right: 33px;
 }
 #Final{
   top:160%;
@@ -497,7 +497,7 @@ body{
 
 #login:hover:after {
   opacity: 1;
-  right: 15px;
+  right: 20px;
 }
 #signup{
   position: absolute;
@@ -543,7 +543,7 @@ body{
 
 #signup:hover:after {
   opacity: 1;
-  right: 15px;
+  right: 20px;
 }
 #help{
   width:100%;
@@ -555,6 +555,7 @@ body{
   display: flex;
   justify-content:center;
   align-items:center;
+  color:blue;
 
   text-decoration:none;
 }

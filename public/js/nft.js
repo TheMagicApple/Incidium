@@ -1,10 +1,21 @@
-//Load OBJ
-var objLoader = new THREE.OBJLoader();
-var mainOBJ = [];
-objLoader.setPath('/assets/');
-objLoader.load('test.obj', function(object) {
-  scene.add(object);
+//Load any OBJ
+var mtlLoader = new THREE.MTLLoader();
+mtlLoader.setBaseUrl('/assets/');
+mtlLoader.setPath('/assets/');
+mtlLoader.load('monke.mtl', function(materials) {
+  materials.preload();
+
+  var objLoader = new THREE.OBJLoader();
+  objLoader.setMaterials(materials);
+  objLoader.setPath('/assets/');
+  objLoader.load('monke.obj', function(object) {
+    myObj = object;
+    scene.add(object);
+  })
+
 })
+
+
 
 //NFT Class
 class Nft {
@@ -15,18 +26,16 @@ class Nft {
 
 
 //Functions
-let fps = 60;           // fps/seconds
+let fps = 60;
 let tau = 2;            // 2 seconds
 const step = 1 / (tau * fps);  // step per frame
-const finalAngle = Math.PI/2;
-const angleStep = finalAngle * step;
 let t = 0;
 
 function rotate(t, direction){
 
   if (t >= 1) return; // Motion ended
   t += step;  // Increment time
-  object.rotation.y += direction/10; // Increment rotation
+  myObj.rotation.y += direction/10; // Increment rotation
   //requestAnimationFrame(() => rotate(t, direction));
 }
 
@@ -81,8 +90,8 @@ if(nft==1){
   alert("not square or pyramid");
 }
 
-var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
-var mesh = new THREE.Mesh(geometry, material);
+//var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
+//ar mesh = new THREE.Mesh(geometry, material);
 
 
 //Slick Silver Sphere
@@ -92,7 +101,7 @@ var material = new THREE.MeshLambertMaterial({color: 0xc0c0c0 });
 var mesh = new THREE.Mesh(geometry, material);
 */
 
-scene.add(mesh);
+//scene.add(mesh);
 
 //Light
 
