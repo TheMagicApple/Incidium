@@ -27,7 +27,7 @@ function login() {
         "username": usernameValue,
         "password": passwordValue
     };
-    requst.open("POST", "/api/login")
+    requst.open("POST", "http://www.incidium.tech/api/login")
     requst.setRequestHeader("Contenttype-","application/json;charset=UTF-8")
     requst.send(JSON.stringify(requestBody))
 
