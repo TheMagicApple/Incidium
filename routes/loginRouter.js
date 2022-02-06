@@ -10,6 +10,7 @@ router.post('/login', async (req, res) => {
     const { username, password } = req.body 
 
     console.log("ASHJKDASJKDHJASLDH")
+    window.location.href="/account";
 
     const response = await axios.get(`http://incidium.tech/api/users/user?username=${username}&password=${password}`);
     if(response == null) return;
