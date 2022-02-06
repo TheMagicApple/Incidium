@@ -1,13 +1,11 @@
-var express = require('express')
-var cookieParser = require('cookie-parser')
+const accountElement = document.querySelector("#Account")
 
-var app = express()
-app.use(cookieParser())
+function setUsername() {
+  const request = new XMLHttpRequest();
+  request.open("GET", "http://www.incidium.tech/api/login/info", true)
+  request.send();
 
-app.get('/', function (req, res) {
-  // Cookies that have not been signed
-  var username=req.cookies("username");
-})
-
-var username=req.cookies("username");
-document.getElementById("Account").innerHTML="Welcome "+username;
+  request.onload = () => {
+    accountElement.innerText = `Welcome ${request.response.username}`;
+  }
+}
