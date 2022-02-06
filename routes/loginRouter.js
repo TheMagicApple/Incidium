@@ -1,4 +1,3 @@
-
 const axios = require('axios')
 
 const cookieParser = require('cookie-parser')
@@ -14,6 +13,8 @@ router.post('/login', async (req, res) => {
     console.log("ASHJKDASJKDHJASLDH")
     
 
+    console.log(username)
+    console.log(password)
     const response = await axios.get(`http://www.incidium.tech/api/users/user?username=${username}&password=${password}`);
     console.log(response)
     if(response == null) return;
@@ -21,7 +22,7 @@ router.post('/login', async (req, res) => {
     res.cookie('username', username);
     res.cookie('password', password);
 
-    res.status(200).send('Cookies sent')
+    res.status(200).send('');
 });
 
 router.post('/logout', (req, res) => {
