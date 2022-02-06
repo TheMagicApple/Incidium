@@ -1,4 +1,3 @@
-
 function setUsername() {
     console.log("ASKDASKHD")
     const req = new XMLHttpRequest();
@@ -11,3 +10,4 @@ function setUsername() {
     req.open("GET", "/api/login/info", true);
     req.send();
 }
+
