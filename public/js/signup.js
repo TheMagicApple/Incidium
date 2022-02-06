@@ -14,8 +14,8 @@ function signUp() {
     const usernameValue = usernameElement.value;
     const passwordValue = passwordElement.value;
 
-    const usernameInputStatus = getInputStatus(username);
-    const passwordInputStatus = getInputStatus(password);
+    const usernameInputStatus = getInputStatus(usernameValue);
+    const passwordInputStatus = getInputStatus(passwordValue);
 
     if(usernameInputStatus != null) return usernameInputStatus;
     if(passwordInputStatus != null) return passwordInputStatus;
