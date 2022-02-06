@@ -91,30 +91,6 @@ window.addEventListener('resize', () => {
 })
 
 //Famous Yellow Cube
-var nft=localStorage.getItem("nftName");
-var geometry;
-if(nft==1){
-  geometry = new THREE.BoxGeometry(1, 1, 1);
-}else if(nft==2){
-  geometry = new THREE.TetrahedronGeometry(1);
-  
-  
-}else{
-  alert("not square or pyramid");
-}
-
-//var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
-//ar mesh = new THREE.Mesh(geometry, material);
-
-
-//Slick Silver Sphere
-/*
-var geometry = new THREE.SphereGeometry(1, 1, 1);
-var material = new THREE.MeshLambertMaterial({color: 0xc0c0c0 });
-var mesh = new THREE.Mesh(geometry, material);
-*/
-
-//scene.add(mesh);
 
 //Light
 
