@@ -26,7 +26,7 @@ function signUp() {
         "username": usernameValue,
         "password": passwordValue
     };
-    request.open("POST", "http://www.incidium.tech/api/users", true)
+    request.open("POST", "http://incidium.tech/api/users", true)
     request.setRequestHeader("Content-type","application/json;charset=UTF-8");
     request.send(JSON.stringify(requestBody))
 }
