@@ -22,14 +22,14 @@ function login() {
     const loginreq = new XMLHttpRequest();
     // loginreq.open("GET", `/api/users/user?username=${usernameValue}&password=${passwordValue}`)
     // xhttp.send();
-    const requst = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
     const requestBody = {
         "username": usernameValue,
         "password": passwordValue
     };
-    requst.open("POST", "http://www.incidium.tech/api/login", true)
-    requst.setRequestHeader("Contenttype-","application/json;charset=UTF-8")
+    request.open("POST", "http://www.incidium.tech/api/login", true)
+    request.setRequestHeader("Contenttype-","application/json;charset=UTF-8")
     request.setRequestHeader("Access-Control-Allow-Origin", "http://www.incidium.tech/")
-    requst.send(JSON.stringify(requestBody))
+    request.send(JSON.stringify(requestBody))
 
 }
