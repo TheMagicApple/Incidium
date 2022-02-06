@@ -29,7 +29,7 @@ function login() {
     };
     request.open("POST", "http://www.incidium.tech/api/login", true)
     request.setRequestHeader("Contenttype-","application/json;charset=UTF-8")
-    request.setRequestHeader("Access-Control-Allow-Origin", "http://www.incidium.tech/")
+    request.setRequestHeader("Access-Control-Allow-Origin", "*");
     request.send(JSON.stringify(requestBody))
 
 }
