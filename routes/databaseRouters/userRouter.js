@@ -5,6 +5,15 @@ const router = express.Router();
 
 router.use(express.json());
 
+router.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+})
+
 router.get('/users', async (req, res) => {
   const status = await SQLUserController.getUsers();
   res.json({ users: status })

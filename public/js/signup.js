@@ -28,7 +28,6 @@ function signUp() {
     };
     request.open("POST", "http://www.incidium.tech/api/users", true)
     request.setRequestHeader("Content-type","application/json;charset=UTF-8");
-    request.setRequestHeader("Access-Control-Allow-Origin", "*");
     request.send(JSON.stringify(requestBody))
     console.log(requestBody)
 }
