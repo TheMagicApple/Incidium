@@ -21,7 +21,7 @@ router.get('/users', async (req, res) => {
 
 router.post('/users', async (req, res) => {
   const { username = null, password = null} = req.body;
-  console.log(req.body)
+  console.log("SHEEEESH", req.body)
 
   if(username == null || password == null) {
     res.json({ "Successful": false, "Reason": "Username or password not specified"});

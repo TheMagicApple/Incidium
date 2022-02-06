@@ -19,16 +19,13 @@ function login() {
     if(usernameInputStatus != null) return usernameInputStatus;
     if(passwordInputStatus != null) return passwordInputStatus;
 
-    const loginreq = new XMLHttpRequest();
-    // loginreq.open("GET", `/api/users/user?username=${usernameValue}&password=${passwordValue}`)
-    // xhttp.send();
     const request = new XMLHttpRequest();
     const requestBody = {
         "username": usernameValue,
         "password": passwordValue
     };
-    request.open("POST", "http://www.incidium.tech/api/login", true)
-    request.setRequestHeader("Contenttype-","application/json;charset=UTF-8")
+    request.open("POST", "http://incidium.tech/api/login", true)
+    request.setRequestHeader("Content-type","application/json;charset=UTF-8")
     request.send(JSON.stringify(requestBody))
 
 }

@@ -19,19 +19,14 @@ router.use((req, res, next) => {
 router.post('/login', async (req, res) => {
     const { username, password } = req.body 
 
-    console.log("ASHJKDASJKDHJASLDH")
-    
-
-    console.log(username)
-    console.log(password)
-    const response = await axios.get(`http://www.incidium.tech/api/users/user?username=${username}&password=${password}`);
+    const response = await axios.get(`http://incidium.tech/api/users/user?username=${username}&password=${password}`);
     console.log(response)
     if(response == null) return;
 
     res.cookie('username', username);
     res.cookie('password', password);
 
-    res.status(200).send('');
+    res.status(200).send('Cookies sent');
 });
 
 router.post('/logout', (req, res) => {
